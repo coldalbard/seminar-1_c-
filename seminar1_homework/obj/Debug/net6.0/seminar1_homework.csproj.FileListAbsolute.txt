@@ -1,0 +1,15 @@
+D:\seminars_c# + git\seminar1_homework\bin\Debug\net6.0\seminar1_homework.exe
+D:\seminars_c# + git\seminar1_homework\bin\Debug\net6.0\seminar1_homework.deps.json
+D:\seminars_c# + git\seminar1_homework\bin\Debug\net6.0\seminar1_homework.runtimeconfig.json
+D:\seminars_c# + git\seminar1_homework\bin\Debug\net6.0\seminar1_homework.dll
+D:\seminars_c# + git\seminar1_homework\bin\Debug\net6.0\seminar1_homework.pdb
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.csproj.AssemblyReference.cache
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.GeneratedMSBuildEditorConfig.editorconfig
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.AssemblyInfoInputs.cache
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.AssemblyInfo.cs
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.csproj.CoreCompileInputs.cache
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.dll
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\refint\seminar1_homework.dll
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.pdb
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\seminar1_homework.genruntimeconfig.cache
+D:\seminars_c# + git\seminar1_homework\obj\Debug\net6.0\ref\seminar1_homework.dll
