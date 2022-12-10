@@ -37,6 +37,9 @@
 // 9012 -> 12
 
 
+
+//                       1 вариант решения
+
 // Console.Write("Please, enter your number: ");
 // int number = Convert.ToInt32(Console.ReadLine());
 // int SummNumbers(int number)
@@ -61,6 +64,35 @@
 
 
 
+//                       2 вариант решения(немного помучавшись смог)
+
+// Console.Write("Please, enter your number: ");
+// int number1 = Convert.ToInt32(Console.ReadLine());
+// int Size(int number1)
+// {
+//     int i = 0;
+//     while(number1 > 0)
+//     {
+//         number1 /= 10;
+//         i++;
+//     }
+//     return i;
+// }
+
+// int i = Size(number1);
+
+// void Sum(int number1, int i)
+// {
+//     int sum = 0;
+//     for(int j = 0; j < i; j++)
+//     {
+//         sum += number1 % 10;
+//         number1 /= 10;
+//     }
+//     Console.WriteLine(sum);
+// }
+// Sum(number1, i);
+
 
 
 
@@ -74,28 +106,28 @@
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
-// Console.Write("Please enter the length of the array ");
-// int number = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please, enter the length of the array: ");
+// int size = Convert.ToInt32(Console.ReadLine());
 
-// int[] Array(int number)
+// int[] Array(int size)
 // {
-//     int [] arr = new int [number];
-//     for (int i = 0; i < number; i++)
+//     int [] arr = new int [size];
+//     for (int i = 0; i < size; i++)
 //     {
-//         arr[i] = new Random().Next(5,16);
+//         Console.Write($"Please, enter the number under the index {i}: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
 //     }
 
 //     return arr;
 // }
-// void ShowArray (int[] arr)
+// void PrintArray(int[] arr)
 // {
 //     for (int i = 0; i < arr.Length; i++)
 //     {
-//         System.Console.Write($"{arr[i]} ");
+//         Console.Write($"[{arr[i]}]");
 //     }
 // }
 
-// ShowArray(Array(number));
-
+// PrintArray(Array(size));
 
 
