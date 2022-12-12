@@ -171,6 +171,7 @@
 
 
 // Упражнение 6
+// Калькулятор для +-*/
 
 // Console.Write("Please enter the first number: ");
 // int number1 = Convert.ToInt32(Console.ReadLine());
@@ -222,3 +223,137 @@
 // PrintResult(result);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Циклы
+
+
+
+
+
+
+// Упражнение 1
+// За каждый месяц банк начисляет к сумме вклада 7% от суммы. 
+// Напишите консольную программу, в которую пользователь вводит сумму вклада 
+// и количество месяцев. А банк вычисляет конечную сумму вклада с учетом начисления 
+// процентов за каждый месяц.
+
+
+// Console.Write("Please enter the deposit amount: ");
+// int deposit = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of months: ");
+// int numbers = Convert.ToInt32(Console.ReadLine());
+
+// int Accruals(int deposit, int numbers)
+// {
+//     int numbers1 = deposit;
+//     for(int i = 0; i <= numbers; i++)
+//     {
+//         numbers1 += (deposit * 7 / 100);
+//     }
+//     return numbers1;
+
+// }
+// int res = Accruals(deposit, numbers);
+// Console.Write($"После {numbers} месяцев сумма вклада составит {res}");
+
+
+
+
+// Упражнение 2
+// Перепишите предыдущую программу, 
+// только вместо цикла for используйте цикл while.
+
+// Console.Write("Please enter the deposit amount: ");
+// int deposit = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of months: ");
+// int numbers = Convert.ToInt32(Console.ReadLine());
+
+// int Accruals(int deposit, int numbers)
+// {
+//     int numbers1 = deposit;
+//     int i = 0;
+//     while(i <= numbers)
+//     {
+//         numbers1 += (deposit * 7 / 100);
+//         i++;
+//     }
+//     return numbers1;
+// }
+// int res = Accruals(deposit, numbers);
+// Console.Write($"После {numbers} месяцев сумма вклада составит {res}");
+
+
+
+
+// Упражнение 3
+// Напишите программу, которая выводит на консоль таблицу умножения
+
+// Console.Write("Enter the number you would like to see the multiplication table to ten: ");
+// int theNumber = Convert.ToInt32(Console.ReadLine());
+
+// void MultiplicationTables(int theNumber)
+// {
+//     int res = 0;
+//     for(int i = 1; i <= 10; i++)
+//     {
+//         res = theNumber * i;
+//         Console.WriteLine($"{theNumber} * {i} = {res}");
+//     }
+// }
+// MultiplicationTables(theNumber);
+
+
+
+
+// Упражнение 4
+// Напишите программу, в которую пользователь вводит два числа и выводит результат
+// их умножения. При этом программа должны запрашивать у пользователя ввод чисел, 
+// пока оба вводимых числа не окажутся в диапазоне от 0 до 10. 
+// Если введенные числа окажутся больше 10 или меньше 0, 
+// то программа должна вывести пользователю о том, что введенные числа недопустимы,
+// и повторно запросить у пользователя ввод двух чисел. 
+// Если введенные числа принадлежат диапазону от 0 до 10, 
+// то программа выводит результат умножения.
+
+// Для организации ввода чисел используйте бесконечный цикл while и оператор break.
+
+
+// Console.Write("Please enter the first number (which is greater than zero but less than ten):  ");
+// int firstNumber = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the second number (which is greater than zero but less than ten):  ");
+// int secondNumber = Convert.ToInt32(Console.ReadLine());
+
+// void Multiplication(int firstNumber, int secondNumber)
+// {
+//     while(true)
+//     {
+//     if(firstNumber < 0 || firstNumber > 10 && secondNumber < 0 || secondNumber > 10)
+//     {
+//         Console.Write("Error");
+//     }
+//     else
+//     {
+//     Console.Write($"{firstNumber} * {secondNumber} = {firstNumber * secondNumber}");
+//     break;
+//     }
+//     }
+// }
+// Multiplication(firstNumber, secondNumber);
