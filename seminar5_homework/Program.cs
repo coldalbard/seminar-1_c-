@@ -19,7 +19,7 @@
 //     return arr;
 // }
 
-//Функция для создания массива
+// //Функция для создания массива
 
 
 
@@ -37,7 +37,7 @@
 // }
 // PrintArray(size, arr);
 
-//Функция для вывода массива на экран
+// //Функция для вывода массива на экран
 
 
 
@@ -54,7 +54,7 @@
 //     return even;
 // }
 
-//Функция для подсчета количества четных чисел
+// //Функция для подсчета количества четных чисел
 
 
 
@@ -71,7 +71,7 @@
 //     return odd;
 // }
 
-//Функция для подсчета количества нечетных чисел(надеюсь за инициативу не побьют))
+// //Функция для подсчета количества нечетных чисел(надеюсь за инициативу не побьют))
 
 
 
@@ -106,7 +106,7 @@
 //     int[] arr = new int [size];
 //     for(int i = 0; i < size; i++)
 //     {
-//         arr[i] = new Random().Next(1, 123);
+//         arr[i] = new Random().Next(-123, 1000);
 //     }
 //     return arr;
 // }
@@ -122,14 +122,24 @@
 //     Console.Write("[");
 //     for(int i = 0; i < size; i++)
 //     {
+//         if(arr[i] < 10 || arr[i] > 99)
+//         {
 //         Console.Write($"{arr[i]}, ");
+//         }
+//         else if(arr[i] > 10 && arr[i] < 99)
+//         {
+//         Console.ForegroundColor = ConsoleColor.Red;
+//         Console.Write($"{arr[i]}, ");
+//         Console.ForegroundColor = ConsoleColor.White;
+//         }
 //     }
 //     Console.Write("]");
 //     Console.WriteLine();
 // }
 // PrintArray(size, arr);
 
-// //Функция для вывода массива на экран
+// //Функция для вывода массива на экран с выделением для чисел которые arr[i]> 10, arr[i] < 99;
+
 
 
 
@@ -138,19 +148,17 @@
 //     int count = 0;
 //     for(int i = 0; i < arr.Length; i++)
 //     {
+//         if(arr[i] > 10 && arr[i] < 99)
+//         {
+//             count = count + 1;
+//         }
 
-//         Console.ForegroundColor = ConsoleColor.Red;
-//         Console.Write($"{arr[i]}, ");
-//         count++;
-//     Console.WriteLine(count);
 //     }
+//     Console.WriteLine($"Количество элементов массива, значения которых лежат в отрезке [10,99] = {count}");
 // }
 // Comparison(arr);
 
-
-
-
-
+// //Функция ждя подсчета элементов которые находятся между 10 и 99.
 
 
 
@@ -274,7 +282,7 @@
 //     double[] massiv = new double [number];
 //     for(int i = 0; i < number; i++)
 //     {
-//         massiv[i] = Convert.ToDouble(new Random().Next(100, 1000)) / 100;
+//         massiv[i] = Convert.ToDouble(new Random().Next(1000, 10000)) / 100;
 //     }
 //     return massiv;
 // }
@@ -394,7 +402,7 @@
 //     {
 //         for(int j = massiv.Length - 1; j >= 1; j--)
 //         {
-//             massiv[i] = massiv[i] + massiv[j];
+//             massiv[i] = massiv[i] * massiv[j];
 //             i++;
 //         }
 //     }
@@ -409,7 +417,7 @@
 
 // }
 
-// //Функция для произведения пар чисел в одномерном массиве.
+//Функция для произведения пар чисел в одномерном массиве.
 
 
 
@@ -427,3 +435,100 @@
 // Print(Nums(massiv));
 
 // //Функция для вывода массива на экран
+
+//Это первый метод(проблема в том, что я сначала развернул 
+//массив а потом начал умножать. И я теперь не могу вывести 
+//элемент который у нас находится по середине если длина нашего массива равна
+// massiv.Length / 2 + 1, но спустя несколько часов  серфинга в инете я придумал
+// второй метод, который работает как надо. Но этот метод тоже имеет право на
+// существование, если даработать конечно).
+//Мой код наверное не поймут даже индусы, извиняюсь если потратил ваше время))
+
+
+
+
+
+
+// //2-й метод
+
+// Console.Write("Please, enter the length of the array: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] ArrayA(int size)
+// {
+//     int[] arr = new int [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         arr[i] = new Random().Next(1, 10);
+//     }
+//     return arr;
+// }
+
+// int[] arr = ArrayA(size);
+
+// //Функция для создания массива
+
+
+
+
+
+// void Print(int[] arr)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]}, ");
+//     }
+//     Console.WriteLine("]");
+// }
+// Print(arr);
+
+// //Функция для вывода массива на экран
+
+
+
+
+// int[] KolVo(int size, int[] arr)
+// {
+//     int[] res1 = new int [size];
+
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         res1[i] = arr[(arr.Length - 1) - i] * arr[i];
+//     }
+
+//     int n = 0;
+
+//     if(res1.Length % 2 == 0) 
+//     {
+//         n = res1.Length / 2;
+//     }
+//     else if(res1.Length % 2 != 0)
+//     {
+//         n = res1.Length / 2 + 1;
+//     }
+
+//     int[] res = new int [n];
+//     for(int j = 0; j < n; j++)
+//     {
+//         res[j] = res1[j];
+//         if(res1.Length % 2 != 0)
+//         {
+//             int temp = arr[n - 1];
+//             arr[n - 1] = res[n - 1];
+//             res[n - 1] = temp;
+//         }
+//     }
+//     return res;
+    
+// }
+// int[] result = KolVo(size, arr);
+
+// //Функция для произведения пар чисел в одномерном массиве.
+
+
+
+
+
+
+// Print(result);
