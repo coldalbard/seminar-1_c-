@@ -90,6 +90,80 @@
 
 
 
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+// Пример для массива из 5, а не 123 элементов. В своём решении сделайте для 123
+// [5, 18, 123, 6, 2] -> 1
+// [1, 2, 3, 6, 2] -> 0
+// [10, 11, 12, 13, 14] -> 5
+
+
+
+// int size = 123;
+
+// int[] CreateArray(int size)                               
+// {
+//     int[] arr = new int [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         arr[i] = new Random().Next(1, 123);
+//     }
+//     return arr;
+// }
+
+// //Функция для создания массива
+
+
+
+// int[] arr = CreateArray(size);
+
+// void PrintArray(int size, int[] arr)
+// {   
+//     Console.Write("[");
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"{arr[i]}, ");
+//     }
+//     Console.Write("]");
+//     Console.WriteLine();
+// }
+// PrintArray(size, arr);
+
+// //Функция для вывода массива на экран
+
+
+
+// void Comparison(int[] arr)
+// {
+//     int count = 0;
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+
+//         Console.ForegroundColor = ConsoleColor.Red;
+//         Console.Write($"{arr[i]}, ");
+//         count++;
+//     Console.WriteLine(count);
+//     }
+// }
+// Comparison(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,32 +260,34 @@
 
 
 
-
+// Задача 38: Задайте массив вещественных чисел. 
+// Найдите разницу между максимальным и минимальным элементов массива.
+// [3 7 22 2 78] -> 76
 
 // Console.Write("Please, enter the length of the array: ");
 // int number = Convert.ToInt32(Console.ReadLine());
 
 
 
-// int[] Array(int number)                               
+// double[] Array(int number)                               
 // {
-//     int[] massiv = new int [number];
+//     double[] massiv = new double [number];
 //     for(int i = 0; i < number; i++)
 //     {
-//         massiv[i] = new Random().Next(1, 100);
+//         massiv[i] = Convert.ToDouble(new Random().Next(100, 1000)) / 100;
 //     }
 //     return massiv;
 // }
 
 // //Функция для создания массива
 
-// int[] massiv = Array(number);
+// double[] massiv = Array(number);
 
 
 
 
 
-// void PrintArray(int number, int[] massiv)
+// void PrintArray(int number, double[] massiv)
 // {
 //     Console.Write("[");
 //     for(int i = 0; i < number; i++)
@@ -227,10 +303,10 @@
 
 
 
-// int Min(int number, int[] massiv)
+// double Min(double[] massiv)
 // {
-//     int min = 0;
-//     for(int i = 0; i < number; i++)
+//     double min = massiv[0];
+//     for(int i = 0; i < massiv.Length; i++)
 //     {
 //         if(min > massiv[i])
 //         {
@@ -239,18 +315,17 @@
 //     }
 //     return min;
 // }
-// int min = Min(number, massiv);
-// Console.WriteLine(min);
+// double min = Min(massiv);
 
 // //Функция для нахождения минимального элемента массива
 
 
 
 
-// int Max(int number, int[] massiv)
+// double Max(double[] massiv)
 // {
-//     int max = 0;
-//     for(int i = 0; i < number; i++)
+//     double max = massiv[0];
+//     for(int i = 0; i < massiv.Length; i++)
 //     {
 //         if(max < massiv[i])
 //         {
@@ -259,12 +334,96 @@
 //     }
 //     return max; 
 // }
-// int max = Max(number, massiv);
-// Console.WriteLine(max);
+// double max = Max(massiv);
 
 // //Функция для нахождения максимального элемента в массиве
 
+// Console.WriteLine($"min = {min} \nmax = {max}");
 // Console.WriteLine($"{max} - {min} = {max - min}");
 
 
 
+
+
+// Задача 37: Найдите произведение пар чисел в одномерном массиве. 
+// Парой считаем первый и последний элемент, второй и предпоследний и т.д. 
+// Результат запишите в новом массиве.
+// [1 2 3 4 5] -> 5 8 3
+// [6 7 3 6] -> 36 21
+
+// Console.Write("Please, enter the length of the array: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] Array(int size)                               
+// {
+//     int[] massiv = new int [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         massiv[i] = new Random().Next(1, 10);
+//     }
+//     return massiv;
+// }
+
+// //Функция для создания массива
+
+// int[] massiv = Array(size);
+
+
+
+
+
+// void PrintArray(int size, int[] massiv)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"{massiv[i]}, ");
+//     }
+//     Console.WriteLine("]");
+// }
+// PrintArray(size, massiv);
+
+// // Функция для вывода массива на экран
+
+
+
+
+// int[] Nums(int[] massiv)
+// {
+//     for(int i = 0; i < massiv.Length; i++)
+//     {
+//         for(int j = massiv.Length - 1; j >= 1; j--)
+//         {
+//             massiv[i] = massiv[i] + massiv[j];
+//             i++;
+//         }
+//     }
+
+//     int[] arr = new int [massiv.Length / 2];
+
+//     for(int f = 0; f < massiv.Length / 2; f++)
+//     {
+//         arr[f] = massiv[f];
+//     }
+//     return arr;
+
+// }
+
+// //Функция для произведения пар чисел в одномерном массиве.
+
+
+
+
+
+// void Print(int[] arr)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         Console.Write($"{arr[i]}, ");
+//     }
+//     Console.Write("]");
+// }
+// Print(Nums(massiv));
+
+// //Функция для вывода массива на экран
