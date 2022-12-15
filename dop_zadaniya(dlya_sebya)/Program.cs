@@ -357,3 +357,150 @@
 //     }
 // }
 // Multiplication(firstNumber, secondNumber);
+
+
+
+
+
+// Задачи с массивами
+
+// Количество положительных чисел
+// Найдем количество положительных чисел в массиве:
+
+// int[] array = {-4, -3, -2, -1, 0, 1, 2, 3, 4};
+// int size = array.Length;
+
+// void Array(int[] array)
+// {
+//     int res = 0;
+//     for (int i = 0; i < size; i++)
+//     {
+//         if(array[i] > 0)
+//         {
+//             res++;
+            
+//         }
+//     }
+//     Console.Write(res);
+// }
+// Array(array);
+
+
+
+
+
+// Инверсия массива
+// Вторая задача - инверсия массива, то есть переворот его в обратном порядке:
+// Console.Write("Please, enter the length of the array: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+
+// int[] Massiv(int size)
+// {
+//     int[] arr = new int [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Please, enter the number under the index {i}: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return arr;
+// }
+
+// void Revers(int[] arr)
+// {
+//     Console.Write("[");
+//     for(int i = size - 1; i >= 0 ; i--)
+//     {
+//         Console.Write($"{arr[i]}, ");
+//     }
+//     Console.Write("]");
+// }
+// Revers(Massiv(size));
+
+
+
+// Программа сортировки массива
+// Теперь возьмем задачу посложнее - простейшую сортировку массива:
+// int[] nums = { 54, 7, -41, 2, 4, 2, 89, 33, -5, 12 };
+
+// int[] Nums(int[] nums)
+// {
+//     for(int i = 0; i < nums.Length; i++)
+//     {
+//         for(int j = 0; j < nums.Length - 1; j++)
+//         {
+//             if(nums[j] > nums[j + 1])
+//             {
+//                 int temp = nums[j + 1];
+//                 nums[j + 1] = nums[j];
+//                 nums[j] = temp;
+//             }
+//         }
+//     }
+//     return nums;
+// }
+
+// void Print(int[] nums)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i < nums.Length; i++)
+//     {
+//         Console.Write($"{nums[i]}, ");
+//     }
+//     Console.Write("]");
+// }
+// Print(Nums(nums));
+
+
+
+
+
+
+
+
+
+
+
+// Знакомство с языками программирования (семинары)
+// Урок 6. Одномерные массивы. Продолжение
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, 
+// сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+// Console.Write("Please, enter the length of the array: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+
+// int[] CreateArray(int size)
+// {
+//     int[] arr = new int [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Please enter the element under the index {i}: ");
+//         arr[i] = Convert.ToInt32(Console.ReadLine());
+//     }
+//     return arr;
+// }
+
+// //Функция для создания массива с опр и с опр элементами которые вводит пользователь
+
+// int[] arr = CreateArray(size);
+
+
+
+// void More(int[] arr)
+// {
+//     int count = 0;
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] > 0)
+//         {
+//             count++;
+//         }
+//     }
+//     Console.WriteLine(count);
+// }
+
+// More(arr);
+
+// //Функция для подсчета полож чисел
