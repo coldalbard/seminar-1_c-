@@ -468,6 +468,8 @@
 // 0, 7, 8, -2, -2 -> 2
 // 1, -7, 567, 89, 223-> 3
 
+
+
 // Console.Write("Please, enter the length of the array: ");
 // int size = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine();
@@ -591,11 +593,9 @@
 
 // void Intersection(double[] arr, double[] array)
 // {
-//     double y = -(array[0] - array[1]) / (arr[0] - arr[1]);
-//     double y1 = arr[0] * y + array[0];
-//     y = Math.Round(y, 3);
-//     y1 = Math.Round(y1, 3);
-//     Console.Write($"Intersection at a point ({y}, {y1})");
+//     double num = -(array[0] - array[1]) / (arr[0] - arr[1]);
+//     double num2 = arr[0] * num + array[0];
+//     Console.Write($"Intersection at a point ({num}, {num2})");
 // }
 // Intersection(arr, array);
 
