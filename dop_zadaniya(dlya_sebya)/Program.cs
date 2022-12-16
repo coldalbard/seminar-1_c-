@@ -470,6 +470,7 @@
 
 // Console.Write("Please, enter the length of the array: ");
 // int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine();
 
 // int[] CreateArray(int size)
 // {
@@ -478,6 +479,7 @@
 //     {
 //         Console.Write($"Please enter the element under the index {i}: ");
 //         arr[i] = Convert.ToInt32(Console.ReadLine());
+//         Console.WriteLine();
 //     }
 //     return arr;
 // }
@@ -485,6 +487,34 @@
 // //Функция для создания массива с опр и с опр элементами которые вводит пользователь
 
 // int[] arr = CreateArray(size);
+
+
+
+
+
+// void PrintArray(int[] arr)
+// {
+//     Console.Write("Your numbers - [");
+//     for(int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] > 0)
+//         {
+//             Console.ForegroundColor = ConsoleColor.Green;
+//             Console.Write($"{arr[i]}, ");
+//             Console.ForegroundColor = ConsoleColor.White;
+//         }
+//         else if(arr[i] < 0)
+//         {
+//             Console.Write($"{arr[i]}, ");
+//         }
+//     }
+//     Console.WriteLine("]");
+//     Console.WriteLine();
+// }
+// PrintArray(arr);
+
+// //Функция для вывода массива, в котором подсвечены зеленым числа котрые > 0;
+
 
 
 
@@ -498,9 +528,77 @@
 //             count++;
 //         }
 //     }
-//     Console.WriteLine(count);
+//     Console.WriteLine($"Numbers that are greater than zero - {count}");
+//     Console.WriteLine();
+
 // }
 
 // More(arr);
 
 // //Функция для подсчета полож чисел
+
+
+
+
+
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, 
+// заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; 
+// значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+
+
+
+// int size = 2;
+
+// double[] PointK(int size)
+// {
+//     double[] arr = new double [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Please enter a period: k{i + 1} = ");
+//         arr[i] = Convert.ToDouble(Console.ReadLine());
+//     }
+//     return arr;
+// }
+// double[] arr = PointK(size);
+
+// //Функция для ввода точек k1, k2
+
+
+
+
+// double[] PointB(int size)
+// {
+//     double[] array = new double [size];
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.Write($"Please enter a period: b{i + 1} = ");
+//         array[i] = Convert.ToDouble(Console.ReadLine());
+//     }
+//     return array;
+// }
+// double[] array = PointB(size);
+
+// //Функция для ввода точек b1, b2
+
+
+
+
+// void Intersection(double[] arr, double[] array)
+// {
+//     double y = -(array[0] - array[1]) / (arr[0] - arr[1]);
+//     double y1 = arr[0] * y + array[0];
+//     y = Math.Round(y, 3);
+//     y1 = Math.Round(y1, 3);
+//     Console.Write($"Intersection at a point ({y}, {y1})");
+// }
+// Intersection(arr, array);
+
+// //Функция для нахождения точек пересечения
+
+
