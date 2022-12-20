@@ -602,3 +602,383 @@
 // //Функция для нахождения точек пересечения
 
 
+
+
+
+
+
+
+
+
+
+
+// Двумерные массивы
+// Показать двумерный массив размером m×n заполненный целыми числами
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[,] CreatArray(int m, int n)
+// {
+//     int[,] array = new int [m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 100);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива
+
+
+// int[,] arr = CreatArray(m, n);
+// // присваиваем переменной arr массив из прошлой функции
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// PrintArray(arr);
+
+// // Функция для вывода массива на экран
+
+
+
+
+
+
+
+
+
+
+
+
+// Показать двумерный массив размером m×n заполненный вещественными числами
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// double[,] FillArray(int x, int y)
+// {
+//     double[,] array = new double [x, y];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().NextDouble() * 100;
+//             array[i, j] = Math.Round(array[i , j], 2);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива с вещественными элементами
+
+// double[,] arr = FillArray(x, y);
+// // присваиваем переменной arr массив из прошлой функции
+
+// void ReturnArray(double[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+// // Функция для вывода массива на экран
+// ReturnArray(arr);
+
+
+
+
+// В двумерном массиве n×k заменить четные элементы на противоположные
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[,] CreatArray2(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 100);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива
+
+// int[,] new_array = CreatArray2(m, n);
+// // Присваеваем перемнной new_array массив из прошлой функции
+
+
+// void PrintArray2(int[,] new_array)
+// {
+//     for(int i = 0; i < new_array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < new_array.GetLength(1); j++)
+//         {
+//             Console.Write($"{new_array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода массива на экран
+
+// PrintArray2(new_array);
+
+
+// void Replacement(int[,] new_array)
+// {
+//     for(int i = 0; i < new_array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < new_array.GetLength(1); j++)
+//         {
+//             if(new_array[i, j] % 2 == 0)
+//             {
+//                 new_array[i, j] += 1;
+//             }
+//             Console.Write($"{new_array[i , j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// // Функция для замены четных элементов двумерного массива
+
+// Replacement(new_array);
+
+
+
+
+
+// Задать двумерный массив следующим правилом: Aₘₙ = m+n
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+
+// int[,] FillArray2(int rows, int columns)
+// {
+//     int[,] array = new int[rows, columns];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 100);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива
+
+// int[,] new_array = FillArray2(rows, columns);
+// // Присваеваем перемнной new_array массив из прошлой функции
+
+
+// void PrintArray2(int[,] new_array)
+// {
+//     for(int i = 0; i < new_array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < new_array.GetLength(1); j++)
+//         {
+//             Console.Write($"{new_array[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода массива на экран
+
+// PrintArray2(new_array);
+
+
+
+// int[,] Amn(int[,] new_array)
+// {
+//     int[,] elements = new int [new_array.GetLength(0), new_array.GetLength(1)];
+//     for(int i = 0; i < new_array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < new_array.GetLength(1); j++)
+//         {
+//             elements[i, j] = new_array[i, j] + new_array[i, j];
+//         }
+//     }
+//     return elements;
+// }
+// // Функция для правила Aₘₙ = m+n
+
+// int[,] elements = Amn(new_array);
+// // Присваиваем переменной elements новый массив из функции Amn
+
+
+// PrintArray2(elements);
+
+
+
+
+
+
+
+// В двумерном массиве заменить элементы, 
+// у которых оба индекса чётные на их квадраты
+
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[,] CreatArray(int m, int n)
+// {
+//     int[,] array = new int [m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива
+
+
+// int[,] arr = CreatArray(m, n);
+// // присваиваем переменной arr массив из прошлой функции
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// PrintArray(arr);
+
+// // Функция для вывода массива на экран
+
+
+// int[,] Even_indexes(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             if(i * i == arr[i, j] || j * j == arr[i, j])
+//             {
+//                 arr[i, j] = 0;
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// int[,] res = Even_indexes(arr);
+
+// PrintArray(res);
+
+
+
+
+
+
+
+
+// В двумерном массиве показать позиции числа, 
+// заданного пользователем или указать, что такого элемента нет
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[,] CreatArray(int m, int n)
+// {
+//     int[,] array = new int [m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 100);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива
+
+
+// int[,] arr = CreatArray(m, n);
+// // присваиваем переменной arr массив из прошлой функции
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// PrintArray(arr);
+
+// // Функция для вывода массива на экран
+
+// void UserNumber(int[,] arr)
+// {
+//     Console.Write("Please enter the number you want to find in the array: ");
+//     int number = Convert.ToInt32(Console.ReadLine());
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             if(arr[i, j] == number)
+//             {
+//                 Console.Write($"{i}, {j}");
+//             }
+//             else
+//             {
+//                 Console.Write("Error");
+//             }
+//         }
+
+//     }
+// }
+// UserNumber(arr);
