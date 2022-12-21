@@ -776,21 +776,25 @@
 
 
 
+
+
+
 // Задать двумерный массив следующим правилом: Aₘₙ = m+n
 
-// Console.Write("Please enter the number of rows in your array: ");
-// int rows = Convert.ToInt32(Console.ReadLine());
-// Console.Write("Please enter the number of columns in your array: ");
-// int columns = Convert.ToInt32(Console.ReadLine());
 
-// int[,] FillArray2(int rows, int columns)
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[,] CreateArray(int m, int n)
 // {
-//     int[,] array = new int[rows, columns];
+//     int[,] array = new int [m, n];
 //     for(int i = 0; i < array.GetLength(0); i++)
 //     {
 //         for(int j = 0; j < array.GetLength(1); j++)
 //         {
-//             array[i, j] = new Random().Next(1, 100);
+//             array[i, j] = new Random().Next(1, 10);
 //         }
 //     }
 //     return array;
@@ -798,47 +802,48 @@
 
 // // Функция для создания двумерного массива
 
-// int[,] new_array = FillArray2(rows, columns);
-// // Присваеваем перемнной new_array массив из прошлой функции
+
+// int[,] arr = CreateArray(m, n);
+// // присваиваем переменной arr массив из прошлой функции
 
 
-// void PrintArray2(int[,] new_array)
+
+
+// void PrintArray(int[,] arr)
 // {
-//     for(int i = 0; i < new_array.GetLength(0); i++)
+//     for(int i = 0; i < arr.GetLength(0); i++)
 //     {
-//         for(int j = 0; j < new_array.GetLength(1); j++)
+//         for(int j = 0; j < arr.GetLength(1); j++)
 //         {
-//             Console.Write($"{new_array[i, j]} ");
+//             Console.Write($"{arr[i, j]} ");
 //         }
 //         Console.WriteLine();
 //     }
 //     Console.WriteLine();
 // }
-// // Функция для вывода массива на экран
+// PrintArray(arr);
 
-// PrintArray2(new_array);
+// Функция для вывода массива на экран
 
 
 
-// int[,] Amn(int[,] new_array)
+// int[,] Amn(int[,] arr)
 // {
-//     int[,] elements = new int [new_array.GetLength(0), new_array.GetLength(1)];
-//     for(int i = 0; i < new_array.GetLength(0); i++)
+//     int[,] array = new int [m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
 //     {
-//         for(int j = 0; j < new_array.GetLength(1); j++)
+//         for(int j = 0; j < array.GetLength(1); j++)
 //         {
-//             elements[i, j] = new_array[i, j] + new_array[i, j];
+//             array[i, j] = i + j;
 //         }
 //     }
-//     return elements;
+//     return array;
 // }
-// // Функция для правила Aₘₙ = m+n
 
-// int[,] elements = Amn(new_array);
-// // Присваиваем переменной elements новый массив из функции Amn
+// int[,] res = Amn(arr);
+// PrintArray(res);
 
 
-// PrintArray2(elements);
 
 
 
@@ -892,23 +897,27 @@
 // // Функция для вывода массива на экран
 
 
-// int[,] Even_indexes(int[,] arr)
+// int[,] FillArray(int[,] arr)
 // {
-//     for(int i = 0; i < arr.GetLength(0); i++)
+//     int[,] array = new int [m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
 //     {
-//         for(int j = 0; j < arr.GetLength(1); j++)
+//         for(int j = 0; j < array.GetLength(1); j++)
 //         {
-//             if(i * i == arr[i, j] || j * j == arr[i, j])
+//             if(i % 2 == 0 && j % 2 == 0)
 //             {
-//                 arr[i, j] = 0;
+//                 array[i, j] = arr[i, j] * arr[i ,j];
+//             }
+//             else
+//             {
+//                 array[i, j] = arr[i, j];
 //             }
 //         }
 //     }
-//     return arr;
+//     return array;
 // }
-// int[,] res = Even_indexes(arr);
-
-// PrintArray(res);
+// int[,] arrayNew = FillArray(arr);
+// PrintArray(arrayNew);
 
 
 
