@@ -991,3 +991,408 @@
 //     }
 // }
 // UserNumber(arr);
+
+
+
+
+
+
+
+
+
+// Задайте двумерный массив. 
+// Найдите сумму элементов, 
+// находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// int[,] CreatArray(int m, int n)
+// {
+//     int[,] array = new int [m, n];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 100);
+//         }
+//     }
+//     return array;
+// }
+
+// // Функция для создания двумерного массива
+
+
+
+// int[,] arr = CreatArray(m, n);
+// // присваиваем переменной arr массив из прошлой функции
+
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// PrintArray(arr);
+
+
+// int NewArray(int[,] arr)
+// {
+//     int[,] array = new int [m, n];
+//     int count = 0;
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if(i == j)
+//             {
+//                 count += arr[i, j];
+//             }
+//         }
+//     }
+//     return count;
+// }
+// Функция для нахождения суммы главной диоганали
+
+
+// int res = NewArray(arr);
+
+// Console.Write($"Сумма элементов главной диагонали: {res}");
+
+
+
+
+
+
+
+// Задача 52. Задайте двумерный массив из целых чисел. 
+// Найдите среднее арифметическое элементов в каждом столбце.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3
+
+
+// int[,] CreateArray(int x, int y)
+// {
+//     int[,] array = new int [x, y];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+// // Функция для создания двумерного массива
+
+
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода массива на экран
+
+
+
+
+// void ArithmeticMean(int[,] new_arr)
+// {
+//     for(int i = 0; i < new_arr.GetLength(0); i++)
+//     {
+//         int[] res = new int [new_arr.GetLength(1)];
+//         for(int j = 0; j < new_arr.GetLength(1); j++)
+//         {
+//             res[i] += new_arr[j, i];
+//         }
+//         Console.Write($"{res[i] / new_arr.GetLength(1)}; ");
+//     }
+// }
+// // Функция для вычисления среднего арифметического
+// // Скажу честно, я нашел вариант решения в инете, но если я так делаю я разбираюсь
+// // как и почему это работает. Но здесь мои полномочия все), в принципе я понял
+// // как работает new_arr[j, i], но не понял почему у нас не меняется итерация строк
+// // пока у нас не закончится итерация таблицы 
+// // (если бы вы мне обьяснили было бы неплохо)
+
+
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter the number of columns in your array: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// int[,] new_arr = CreateArray(x, y);
+// // присваиваем переменной arr массив из  функции CreateArray
+
+// PrintArray(new_arr);
+
+// ArithmeticMean(new_arr);
+
+
+
+
+
+
+
+
+
+// Написать программу, которая обменивает 
+// элементы первой строки и последней строки
+
+// int[,] CreateArray(int x, int y)
+// {
+//     int[,] array = new int [x, y];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+// // Функция для создания двумерного массива
+
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода массива на экран
+
+
+// int[,] ReplacingString(int[,] arr)
+// {
+//     int[,] array = new int [arr.GetLength(0), arr.GetLength(1)];
+
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         int temp = arr[0, i];
+//         arr[0, i] = arr[arr.GetLength(1) - 1, i];
+//         arr[arr.GetLength(1) - 1, i] = temp;
+//     }
+
+//     for(int j = 0; j < arr.GetLength(0); j++)
+//     {
+//         for(int k = 0; k < arr.GetLength(1); k++)
+//         {
+//             array[j, k] = arr[j, k];
+//         }
+//     }
+//     return array;
+// }
+
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter the number of columns in your array: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// int[,] arr = CreateArray(x, y);
+
+// PrintArray(arr);
+
+// int[,] res = ReplacingString(arr);
+// PrintArray(res);
+
+
+
+
+
+
+
+
+
+
+
+// Написать программу, 
+// упорядочивания по убыванию элементы каждой строки двумерной массива.
+
+
+// int[,] CreateArray(int x, int y)
+// {
+//     int[,] array = new int [x, y];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+// // Функция для создания двумерного массива
+
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода массива на экран
+
+
+
+// int[,] Sorting(int[,] arr)
+// {
+//     for (int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             for (int k = 0; k < arr.GetLength(1); k++)
+//             {
+//                 if (arr[i, j] <= arr[i, k])
+//                 {
+//                     int temp = arr[i, j];
+//                     arr[i, j] = arr[i, k];
+//                     arr[i, k] = temp;
+//                 }
+//             }
+//         }
+//     }
+//     return arr;
+// }
+// // Функция для сортировки двумерного массива по строкам
+
+
+
+
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter the number of columns in your array: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// int[,] arr = CreateArray(x, y);
+
+// PrintArray(arr);
+
+// int[,] array = Sorting(arr);
+
+// PrintArray(array);
+
+
+
+
+
+
+// Написать программу, которая в двумерном массиве заменяет строки на столбцы
+// или сообщить, что это невозможно (в случае, если матрица не квадратная).
+
+
+// int[,] CreateArray(int x, int y)
+// {
+//     int[,] array = new int [x, y];
+//     for(int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
+// // Функция для создания двумерного массива
+
+
+
+// void PrintArray(int[,] arr)
+// {
+//     for(int i = 0; i < arr.GetLength(0); i++)
+//     {
+//         for(int j = 0; j < arr.GetLength(1); j++)
+//         {
+//             Console.Write($"{arr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода массива на экран
+
+
+// void ArrayReverse(int[,] arr)
+// {
+//     if(arr.GetLength(0) == arr.GetLength(1))
+//     {
+//         for(int i = 0; i < arr.GetLength(0); i++) 
+//         {
+//             for(int j= i + 1; j < arr.GetLength(1); j++) 
+//             {
+//                 int temp = arr[i, j];
+//                 arr[i, j] = arr[j, i];
+//                 arr[j, i] = temp;
+//             }
+//         }
+//         PrintArray(arr);
+//     }
+//     else
+//     {
+//         Console.WriteLine("Error ");
+//     }
+// }
+
+
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter the number of columns in your array: ");
+// int y = Convert.ToInt32(Console.ReadLine());
+
+// int[,] arr = CreateArray(x, y);
+
+// PrintArray(arr);
+
+// ArrayReverse(arr);
+
