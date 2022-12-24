@@ -183,6 +183,7 @@
 // Например, даны 2 матрицы:
 // 2 4 | 3 4
 // 3 2 | 3 3
+
 // Результирующая матрица будет:
 // 18 20
 // 15 18
@@ -200,6 +201,20 @@
 // // Функция для создания второго массива 
 
 
+// int[,] SumMatrix(int[,] matrix, int [,] array){
+//     int[,] sumMatrix = new int [matrix.GetLength(0), matrix.GetLength(1)];
+//     for(int i = 0; i < matrix.GetLength(0); i++){
+//         for(int j = 0; j < matrix.GetLength(1); j++){
+//             int sum = 0;
+//             for (int k = 0; k < sumMatrix.GetLength(1); k++){
+//                 sum += matrix[i,k] * array[k,j];
+//             }
+//             sumMatrix[i, j] = sum;
+//         }
+//     }
+
+//     return sumMatrix;
+// }
 
 
 
@@ -232,3 +247,76 @@
 
 // int[,] array = CreateArray2(x, y, minValue, maxValue);
 // PrintArray(array);
+
+// int[,] sumMatrix = SumMatrix(matrix, array);
+// PrintArray(sumMatrix);
+
+
+
+
+
+
+
+// Задача 60. ...Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
+// Напишите программу, которая будет построчно выводить массив, 
+// добавляя индексы каждого элемента.
+// Массив размером 2 x 2 x 2
+// 66(0,0,0) 25(0,1,0)
+// 34(1,0,0) 41(1,1,0)
+// 27(0,0,1) 90(0,1,1)
+// 26(1,0,1) 55(1,1,1)
+
+
+// int[,,] Create3DMatrix(int m, int n, int x){
+//     int[,,] matrix3D = new int [m, n, x];
+//     for (int i = 0; i < matrix3D.GetLength(0); i++){
+//         for (int j = 0; j < matrix3D.GetLength(1); j++){
+//             for (int k = 0; k < matrix3D.GetLength(2); k++){
+//                 matrix3D[i, j, k] = new Random().Next(1, 10);
+//             }
+//         }
+//     }
+//     return matrix3D;
+// }
+
+// void Print3DMatrix(int[,,] matrix3D){
+//     for (int i = 0; i < matrix3D.GetLength(0); i++){
+//         for (int j = 0; j < matrix3D.GetLength(1); j++){
+//             for (int k = 0; k < matrix3D.GetLength(2); k++){
+//                 Console.Write($"{matrix3D[i, j, k]} ");
+//             }
+//             Console.WriteLine();
+//         }
+//     }
+// }
+
+// int[,,] Replacement(int[,,] matrix3D){
+//     for (int i = 0; i < matrix3D.GetLength(0); i++){
+//         for (int j = 0; j < matrix3D.GetLength(1); j++){
+//             for (int k = 0; k < matrix3D.GetLength(2); k++){
+//                 if(matrix3D[i, j, k] == ){
+//                     matrix3D[i, j, k] = new Random().Next(1, 100);
+//                 }
+//             }
+//         }
+//     }
+//     return matrix3D;
+// }
+
+
+    
+// Console.Write("Please enter m: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter n: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter x: ");
+// int x = Convert.ToInt32(Console.ReadLine());
+
+// int[,,] matrix3D = Create3DMatrix(m, n, x);
+// Print3DMatrix(matrix3D);
+// Console.WriteLine();
+
+// int[,,] array = Replacement(matrix3D);
+// Print3DMatrix(array);
