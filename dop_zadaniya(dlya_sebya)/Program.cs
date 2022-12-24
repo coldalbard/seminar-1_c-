@@ -1326,6 +1326,82 @@
 
 
 
+
+
+
+
+
+
+// 2-й метод(свой)
+
+// int[,] CreateArray(int m, int n, int min, int max)
+// {
+//     int[,] matrix = new int [m, n];
+//     for(int i = 0; i < m; i++){
+//         for(int j = 0; j < n; j++){
+//             matrix[i, j] = new Random().Next(min, max);
+//         }
+//     }
+//     return matrix;
+// }
+// // Функция для создания двумерного массива
+
+// void PrintArray(int[,] matrix)
+// {
+//     for(int i = 0; i < matrix.GetLength(0); i++){
+//         for(int j = 0; j < matrix.GetLength(1); j++){
+//             Console.Write($"{matrix[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// // Функция для вывода двумерного массива в консоль
+
+// int[,] Sort2DLinesArray(int[,] matrix)
+// {
+//     int[,] arr = new int [matrix.GetLength(0), matrix.GetLength(1)];
+//     for(int i = 0; i < matrix.GetLength(0); i++){
+//         for(int j = 0; j < matrix.GetLength(1); j++){
+//             if(matrix[i, j] > matrix[i, j]){
+//                 arr[i, j] = matrix[i, j];
+//             }
+//         }
+//     }
+//     return arr;
+// }
+
+// Console.Write("Please enter the number of rows in your array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter the number of columns in your array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("min = ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.Write("max = ");
+// int max = Convert.ToInt32(Console.ReadLine());
+
+
+// int[,] matrix = CreateArray(m, n, min, max);
+
+// PrintArray(matrix);
+
+// int[,] arr = Sort2DLinesArray(matrix);
+
+// PrintArray(arr);
+
+
+
+
+
+
+
+
+
+
+
+
 // Написать программу, которая в двумерном массиве заменяет строки на столбцы
 // или сообщить, что это невозможно (в случае, если матрица не квадратная).
 
@@ -1395,9 +1471,6 @@
 // PrintArray(arr);
 
 // ArrayReverse(arr);
-
-
-
 
 
 
