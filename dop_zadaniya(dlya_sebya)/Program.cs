@@ -1475,3 +1475,85 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+// Рекурсия 
+
+// Показать натуральные числа от 1 до N, N задано
+
+// Console.Write("Enter a natural number greater than 1: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// string NaturalNumbers(int n){
+//     if(n < 0){
+//         return "-1";
+//     }
+//     if (n == 1) {
+//         return "1";
+//     }
+//     return NaturalNumbers(n - 1) + " " + n;
+
+// }
+// // Функция для вывода натуральных чисел от 1 до n
+
+// string res = NaturalNumbers(n);
+// Console.Write(res);
+
+
+
+
+
+
+
+// Показать натуральные числа от N до 1, N задано
+
+// void OutputOfNaturalNumbers(int n)
+// {
+//     if (n < 0){
+//         Console.Write($"{n} not a natural number");
+//     } 
+//     if (n > 0){
+//         Console.Write($"{n}, ");
+//         OutputOfNaturalNumbers(n - 1);
+//     }
+// }
+// // Функция для вывода натуральных чисел от n до 1
+
+// OutputOfNaturalNumbers(n);
+
+
+
+
+
+
+// Показать натуральные числа от M до N, N и M заданы
+
+// Console.Write("Enter a natural number M: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Enter a natural number N: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+
+// string Range(int m, int n){
+//     if(m < 1 || n < 1 || m > n){
+//         if(m == n){
+//             return $"{m}";
+//         }
+//         return "-1";
+//     }
+//     else {
+//         return m + " " + Range(m + 1, n);
+//     }
+    
+// }
+// string result = Range(m, n);
+// Console.WriteLine(result);
+
