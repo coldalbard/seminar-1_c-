@@ -32,6 +32,8 @@
 //     Console.WriteLine();
 // }
 // Функция для вывода двумерного массива в консоль
+// Эти две функции я буду использовать для еще нескольких функций
+
 
 // int[,] Sort2DArray(int[,] matrix)
 // {
@@ -48,7 +50,7 @@
 //     }
 //     return matrix;
 // }
-// Функция для сортировки массива по строкам(по убыванию)
+// // Функция для сортировки массива по строкам(по убыванию)
 
 
 // Console.Write("Please enter the number of rows in your array: ");
@@ -57,9 +59,9 @@
 // Console.Write("Please enter the number of columns in your array: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("min = ");
+// Console.Write("Enter your min value = ");
 // int min = Convert.ToInt32(Console.ReadLine());
-// Console.Write("max = ");
+// Console.Write("Enter your max value = ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
 
@@ -73,46 +75,6 @@
 
 
 
-
-
-// // 1-й метод я нашел в интернете, в принципе я понял как он работает,
-// // но он показалася мне сложным. Из-за этого я придумал свой метод, который 
-// // будет по понятней и кароче)
-
-// // 2-й метод
-
-// int[,] Sort2DLinesArray(int[,] matrix)
-// {
-//     int[,] arr = new int [matrix.GetLength(0), matrix.GetLength(1)];
-//     for(int i = 0; i < matrix.GetLength(0); i++){
-//         for(int j = 0; j < matrix.GetLength(1); j++){
-//             if(matrix[i, j] > matrix[i, j]){
-//                 arr[i, j] = matrix[i, j];
-//             }
-//         }
-//     }
-//     return arr;
-// }
-
-// Console.Write("Please enter the number of rows in your array: ");
-// int m = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("Please enter the number of columns in your array: ");
-// int n = Convert.ToInt32(Console.ReadLine());
-
-// Console.Write("min = ");
-// int min = Convert.ToInt32(Console.ReadLine());
-// Console.Write("max = ");
-// int max = Convert.ToInt32(Console.ReadLine());
-
-
-// int[,] matrix = CreateArray(m, n, min, max);
-
-// PrintArray(matrix);
-
-// int[,] arr = Sort2DLinesArray(matrix);
-
-// PrintArray(arr);
 
 
 
@@ -160,9 +122,9 @@
 // Console.Write("Please enter the number of columns in your array: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 
-// Console.Write("min = ");
+// Console.Write("Enter your min value = ");
 // int min = Convert.ToInt32(Console.ReadLine());
-// Console.Write("max = ");
+// Console.Write("Enter your max value = ");
 // int max = Convert.ToInt32(Console.ReadLine());
 
 
@@ -215,7 +177,7 @@
 
 //     return sumMatrix;
 // }
-
+// // Функция для нахождения произведения двух матриц
 
 
 
@@ -268,42 +230,36 @@
 
 
 // int[,,] Create3DMatrix(int m, int n, int x){
+//     int[,,] array = new int [m, n, x];
 //     int[,,] matrix3D = new int [m, n, x];
 //     for (int i = 0; i < matrix3D.GetLength(0); i++){
 //         for (int j = 0; j < matrix3D.GetLength(1); j++){
 //             for (int k = 0; k < matrix3D.GetLength(2); k++){
-//                 matrix3D[i, j, k] = new Random().Next(1, 10);
+//                 array[i, j, k] = new Random().Next(1, 10);
+//                 matrix3D[i, j, k] = array[i, j, k] + new Random().Next(10, 100);
 //             }
 //         }
 //     }
 //     return matrix3D;
 // }
+// // Функция для создания трехмерного массива с элементами которые не повтрояются
+// // по крайней мере они у меня не повторялись(хотя я знаю, что есть вероятность.
+// // Но это все что я сам смог придумать, а делать копипаст который не понимаю такое себе)
 
 // void Print3DMatrix(int[,,] matrix3D){
 //     for (int i = 0; i < matrix3D.GetLength(0); i++){
 //         for (int j = 0; j < matrix3D.GetLength(1); j++){
 //             for (int k = 0; k < matrix3D.GetLength(2); k++){
-//                 Console.Write($"{matrix3D[i, j, k]} ");
+//                 Console.Write($"{matrix3D[i, j, k]}({i},{j},{k})");
 //             }
 //             Console.WriteLine();
 //         }
 //     }
 // }
-
-// int[,,] Replacement(int[,,] matrix3D){
-//     int[] array = new int [matrix3D.GetLength(0) *  matrix3D.GetLength(1) * matrix3D.GetLength(2)];
-//     for (int i = 0; i < matrix3D.GetLength(0); i++){
-//         for (int j = 0; j < matrix3D.GetLength(1); j++){
-//             for (int k = 0; k < matrix3D.GetLength(2); k++){
-
-//             }
-//         }
-//     }
-//     return matrix3D;
-// }
+// // Функция для вывода трехмерного массива на экран
 
 
-    
+
 // Console.Write("Please enter m: ");
 // int m = Convert.ToInt32(Console.ReadLine());
 
@@ -314,8 +270,58 @@
 // int x = Convert.ToInt32(Console.ReadLine());
 
 // int[,,] matrix3D = Create3DMatrix(m, n, x);
+
 // Print3DMatrix(matrix3D);
 // Console.WriteLine();
 
-// int[,,] array = Replacement(matrix3D);
-// Print3DMatrix(array);
+
+
+
+
+// Напишите программу, которая заполнит спирально массив 4 на 4.
+// Например, на выходе получается вот такой массив:
+// 01 02 03 04
+// 12 13 14 05
+// 11 16 15 06
+// 10 09 08 07
+
+// void SpiralArray(int m, int n){
+//     int[,] array = new int [m, n];
+//     int point1 = 0, point2 = 0, point3 = 0, point4 = 0;
+//     int k = 1;
+//     int i = 0;
+//     int j = 0;
+
+//     while(k <= n * m){
+//         array[i, j] = k;
+//         if(i == point1 && j < m - point4 - 1) ++j;
+//         else if(j == m - point4 - 1 && i < n - point2 - 1) ++i;
+//         else if(i == n - point2 - 1 && j > point3) --j;
+//         else --i;
+//         if((i == point1 + 1) 
+//         && (j == point3) 
+//         && (point3 != m - point4 - 1)){
+//             ++point1;
+//             ++point2;
+//             ++point3;
+//             ++point4;
+//         }
+//         ++k;
+//     }
+
+//     for(int l = 0; l < m; l++){
+//         for(int p = 0; p < n; p++){
+//             Console.Write($"{array[l, p]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+// Console.Write("Please enter the number of rows in the first array: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Please enter the number of columns in the first array: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+// SpiralArray(m, n);
