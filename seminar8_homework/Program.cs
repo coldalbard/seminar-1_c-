@@ -291,12 +291,11 @@
 // }
 
 // int[,,] Replacement(int[,,] matrix3D){
+//     int[] array = new int [matrix3D.GetLength(0) *  matrix3D.GetLength(1) * matrix3D.GetLength(2)];
 //     for (int i = 0; i < matrix3D.GetLength(0); i++){
 //         for (int j = 0; j < matrix3D.GetLength(1); j++){
 //             for (int k = 0; k < matrix3D.GetLength(2); k++){
-//                 if(matrix3D[i, j, k] == ){
-//                     matrix3D[i, j, k] = new Random().Next(1, 100);
-//                 }
+
 //             }
 //         }
 //     }
