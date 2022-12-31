@@ -1773,24 +1773,30 @@
 
 // void Composition(int numbers){
 //     int[] array = new int [numbers];
-//     int compasition = 0;
-//     int polozh = 0;
-//     int min = array[0];
-//     int max = array[0];
+//     int compasition = 1, sum = 0, min = array[0], max = array[0];
 //     Console.WriteLine("enter the numbers: ");
 //     for(int i = 0; i < numbers; i++){
 //         array[i] = Convert.ToInt32(Console.ReadLine());
 //         if(array[i] > 0){
-//             polozh += array[i];
+//             sum += array[i];
 //         }
 //         if(min > array[i]) min = i;
 //         if(max < array[i]) max = i;
-//         for(int j = min; j < max; j++){
-//             compasition *= array[j];
+//         int imin = min, imax = max;
+
+//         if(imin > imax){
+//             for(int j = imax + 1; j < imin; j++){
+//                 compasition *= array[j];
+//             }
+//         }
+//         if(imax > imin){
+//            for(int k = imin; k < imax - 1; k++){
+//                 compasition *= array[k];
+//             } 
 //         }
 //     }
 //     Console.WriteLine(compasition);
-//     Console.WriteLine(polozh);
+//     Console.WriteLine(sum);
 
 // }
 // Composition(numbers);
@@ -1819,11 +1825,11 @@
 //  {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
 //  {0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 4, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 },
 //  {0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
-//  {0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0 },
+//  {0, 0, 0, 0, 0, 0, 0, 1, 0, 2, 0, 0, 2, 0, 0, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0 },
 //  {0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 4, 0, 0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
 //  {0, 0, 0, 0, 0, 0, 0, 1, 3, 0, 0, 0, 0, 2, 0, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0 },
 //  {0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0 },
-//  {0, 0, 0, 0, 0, 1, 0, 2, 4, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
+//  {0, 0, 0, 0, 0, 1, 0, 2, 3, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 0, 0 },
 //  {0, 0, 0, 0, 1, 4, 0, 0, 0, 2, 0, 0, 0, 3, 0, 0, 4, 0, 2, 0, 1, 0, 0, 0, 0 },
 //  {0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0 },
 //  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -1845,12 +1851,12 @@
 //             }
 //             else if(image[i, j] == 3){
 //                 Console.ForegroundColor = ConsoleColor.Blue;
-//                 Console.Write($"*");
+//                 Console.Write($"x");
 //                 Console.ForegroundColor = ConsoleColor.White;
 //             }
 //             else if(image[i, j] == 4){
 //                 Console.ForegroundColor = ConsoleColor.Red;
-//                 Console.Write($"*");
+//                 Console.Write($"o");
 //                 Console.ForegroundColor = ConsoleColor.White;
 //             }
 //             else {
